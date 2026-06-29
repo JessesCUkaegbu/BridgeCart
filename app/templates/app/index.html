@@ -1,0 +1,389 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<section class="page active" id="page-home">
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-wrap" id="hw">
+                <div class="preview-tag">HERO ANIMATION PREVIEW</div>
+                <div class="stars" id="stars" aria-hidden="true"></div>
+                <div class="moon" aria-hidden="true"></div>
+                <div class="plane-trail" aria-hidden="true"></div>
+                <div class="plane" aria-hidden="true">&#9992;&#65039;</div>
+                <div class="skyline" id="skyline" aria-hidden="true"></div>
+                <div class="crane-arm" aria-hidden="true"></div>
+                <div class="ocean" aria-hidden="true">
+                    <svg class="wave-svg wave1" viewBox="0 0 1440 40" preserveAspectRatio="none" height="40">
+                        <path d="M0,20 C120,5 240,35 360,20 C480,5 600,35 720,20 C840,5 960,35 1080,20 C1200,5 1320,35 1440,20 C1560,5 1680,35 1800,20 C1920,5 2040,35 2160,20 C2280,5 2400,35 2520,20 C2640,5 2760,35 2880,20" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+                    </svg>
+                    <svg class="wave-svg wave2" viewBox="0 0 1440 40" preserveAspectRatio="none" height="40">
+                        <path d="M0,25 C180,10 360,38 540,25 C720,10 900,38 1080,25 C1260,10 1440,38 1620,25 C1800,10 1980,38 2160,25 C2340,10 2520,38 2700,25 C2880,10 3060,38 3240,25" fill="none" stroke="rgba(100,160,220,0.25)" stroke-width="1"/>
+                    </svg>
+                    <svg class="wave-svg wave3" viewBox="0 0 1440 40" preserveAspectRatio="none" height="40">
+                        <path d="M0,18 C90,8 180,28 270,18 C360,8 450,28 540,18 C630,8 720,28 810,18 C900,8 990,28 1080,18 C1170,8 1260,28 1350,18 C1440,8 1530,28 1620,18 C1710,8 1800,28 1890,18 C1980,8 2070,28 2160,18" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="0.8"/>
+                    </svg>
+                    <div class="shimmer-line" style="bottom:50px; --sd:3.2s;"></div>
+                    <div class="shimmer-line" style="bottom:38px; --sd:4.5s; animation-delay:1.5s;"></div>
+                    <div class="shimmer-line" style="bottom:25px; --sd:5s; animation-delay:0.8s;"></div>
+                </div>
+                <div class="ship" aria-hidden="true">
+                    <svg class="ship-svg" width="240" height="90" viewBox="0 0 240 90">
+                        <path d="M10 55 Q10 72 26 76 L214 76 Q230 72 230 55 L224 45 L16 45 Z" fill="#0f2447" stroke="#C9A84C" stroke-width="1.2"/>
+                        <rect x="16" y="45" width="208" height="6" rx="2" fill="#1B3A6B" stroke="#C9A84C" stroke-width="0.7"/>
+                        <path d="M26 72 L214 72" stroke="#C9A84C" stroke-width="1" opacity="0.5"/>
+                        <path d="M20 76 Q120 82 220 76" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.4"/>
+                        <rect x="155" y="24" width="55" height="23" rx="3" fill="#1B3A6B" stroke="#C9A84C" stroke-width="0.8"/>
+                        <rect x="161" y="29" width="8" height="8" rx="1.5" fill="#C9A84C" opacity="0.85"/>
+                        <rect x="174" y="29" width="8" height="8" rx="1.5" fill="#C9A84C" opacity="0.85"/>
+                        <rect x="187" y="29" width="8" height="8" rx="1.5" fill="#C9A84C" opacity="0.85"/>
+                        <rect x="195" y="14" width="10" height="14" rx="2" fill="#0f2447" stroke="#C9A84C" stroke-width="0.8"/>
+                        <circle cx="200" cy="11" r="4" fill="#C9A84C" opacity="0.3"/>
+                        <circle cx="205" cy="7" r="3" fill="#C9A84C" opacity="0.18"/>
+                        <circle cx="209" cy="4" r="2" fill="#C9A84C" opacity="0.1"/>
+                        <line x1="170" y1="0" x2="170" y2="25" stroke="#C9A84C" stroke-width="1.2"/>
+                        <polygon points="170,3 185,8 170,14" fill="#C9A84C" opacity="0.9"/>
+                        <rect x="20" y="28" width="32" height="18" rx="2" fill="#C9A84C" opacity="0.85"/>
+                        <rect x="56" y="28" width="32" height="18" rx="2" fill="#1B3A6B" stroke="#C9A84C" stroke-width="0.7"/>
+                        <rect x="92" y="28" width="32" height="18" rx="2" fill="#C9A84C" opacity="0.7"/>
+                        <rect x="128" y="28" width="24" height="18" rx="2" fill="#1B3A6B" stroke="#C9A84C" stroke-width="0.7"/>
+                        <line x1="36" y1="28" x2="36" y2="46" stroke="#0f2447" stroke-width="0.7"/>
+                        <line x1="72" y1="28" x2="72" y2="46" stroke="#C9A84C" stroke-width="0.4" opacity="0.5"/>
+                        <line x1="108" y1="28" x2="108" y2="46" stroke="#0f2447" stroke-width="0.7"/>
+                        <rect x="24" y="12" width="28" height="16" rx="2" fill="#1B3A6B" stroke="#C9A84C" stroke-width="0.7"/>
+                        <rect x="56" y="12" width="28" height="16" rx="2" fill="#C9A84C" opacity="0.75"/>
+                        <rect x="88" y="12" width="28" height="16" rx="2" fill="#1B3A6B" stroke="#C9A84C" stroke-width="0.7"/>
+                        <rect x="120" y="12" width="28" height="16" rx="2" fill="#C9A84C" opacity="0.6"/>
+                        <line x1="38" y1="12" x2="38" y2="28" stroke="#0f2447" stroke-width="0.7"/>
+                        <line x1="70" y1="12" x2="70" y2="28" stroke="#0f2447" stroke-width="0.7"/>
+                        <line x1="102" y1="12" x2="102" y2="28" stroke="#0f2447" stroke-width="0.7"/>
+                        <path d="M10 58 Q0 64 -8 68" fill="none" stroke="rgba(201,168,76,0.4)" stroke-width="1.5"/>
+                        <path d="M10 62 Q-2 68 -12 72" fill="none" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+                    </svg>
+                </div>
+                <div class="pkg" style="right:60px; bottom:195px; --fp:2.8s;">📦</div>
+                <div class="pkg" style="right:120px; bottom:220px; --fp:3.5s; animation-delay:0.7s; font-size:16px;">📱</div>
+                <div class="pkg" style="right:40px; bottom:235px; --fp:4s; animation-delay:1.2s; font-size:14px;">👟</div>
+                <div class="signal-dot" style="right:55px; bottom:198px;" aria-hidden="true"></div>
+                <div class="hero-text">
+                    <div class="eyebrow">Sourced in China · Delivered to Liberia</div>
+                    <h2>From China,<br><em>straight to your door</em></h2>
+                    <p>We source it, inspect it, ship it, and deliver it right to you in Liberia.</p>
+                    <div class="hero-btns">
+                        <button class="btn-gold" type="button" data-scroll-target="request-form">
+                            <i class="bi bi-send"></i> Request a product
+                        </button>
+                        <button class="btn-ghost" type="button" data-page-target="shop">
+                            <i class="bi bi-bag"></i> Browse the shop
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-bar">
+        <div class="container trust-bar-inner">
+            <div class="trust-item" data-aos="fade-up" data-aos-delay="0"><i class="bi bi-patch-check"></i> Quality verified</div>
+            <div class="trust-item" data-aos="fade-up" data-aos-delay="100"><i class="bi bi-geo-alt"></i> Delivered in Liberia</div>
+            <div class="trust-item" data-aos="fade-up" data-aos-delay="200"><i class="bi bi-arrow-repeat"></i> Full refund if our fault</div>
+            <div class="trust-item" data-aos="fade-up" data-aos-delay="300"><i class="bi bi-headset"></i> WhatsApp support</div>
+            <div class="trust-item" data-aos="fade-up" data-aos-delay="400"><i class="bi bi-clock"></i> Quote within 24 hours</div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <section class="section" id="how-it-works">
+        <div class="section-label">How it works</div>
+        <h2>Four steps, zero stress</h2>
+        <p class="sub">You do not need to know any suppliers. Just tell us what you want and we handle everything from
+            China to your door.</p>
+        <div class="steps">
+            <article class="step" data-aos="fade-up">
+                <div class="step-num">1</div>
+                <h3>Request your product</h3>
+                <p>Fill the form below or browse the shop. Tell us what you want, your budget, and where to deliver.</p>
+            </article>
+            <article class="step" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-num">2</div>
+                <h3>We send you a quote</h3>
+                <p>We find the best supplier and send you a full price breakdown within 24 hours via WhatsApp.</p>
+            </article>
+            <article class="step" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-num">3</div>
+                <h3>Pay and we ship</h3>
+                <p>Pay a 50% deposit. We order, inspect the product in China, and ship it straight to Liberia.</p>
+            </article>
+            <article class="step" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-num">4</div>
+                <h3>Receive your order</h3>
+                <p>Pay the remaining 50% on delivery. We bring it directly to your location in Liberia.</p>
+            </article>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <div class="section-label">What we source</div>
+        <h2>Our product categories</h2>
+        <p class="sub">We source from trusted Chinese suppliers across these categories, and everything is checked
+            before it leaves China.</p>
+        <div class="cats">
+            <button type="button" class="cat" data-page-target="shop" data-category-target="Electronics" data-aos="zoom-in">
+                <i class="bi bi-laptop"></i>
+                <h3>Electronics</h3>
+                <p>Phones, laptops, accessories</p>
+            </button>
+            <button type="button" class="cat" data-page-target="shop" data-category-target="Clothing" data-aos="zoom-in" data-aos-delay="100">
+                <i class="bi bi-bag"></i>
+                <h3>Clothing</h3>
+                <p>Men, women, children</p>
+            </button>
+            <button type="button" class="cat" data-page-target="shop" data-category-target="Footwear" data-aos="zoom-in" data-aos-delay="200">
+                <i class="bi bi-boot"></i>
+                <h3>Footwear</h3>
+                <p>Sneakers, sandals, formal</p>
+            </button>
+            <button type="button" class="cat" data-page-target="shop" data-category-target="Furniture" data-aos="zoom-in" data-aos-delay="300">
+                <i class="bi bi-house-door"></i>
+                <h3>Furniture</h3>
+                <p>Home and office pieces</p>
+            </button>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <div class="section-label">Why us</div>
+        <h2>Why choose BridgeCart</h2>
+        <p class="sub">We are not just a middleman. We are your trusted buying agent on the ground in China.</p>
+        <div class="why-grid">
+            <article class="why-card" data-aos="fade-up">
+                <i class="bi bi-geo-alt"></i>
+                <h3>Based in China</h3>
+                <p>We are physically here to visit factories, verify suppliers, and negotiate the best prices for you.</p>
+            </article>
+            <article class="why-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="bi bi-eye"></i>
+                <h3>Quality inspection</h3>
+                <p>Every product is checked before it leaves China. We will not ship anything we would not use ourselves.</p>
+            </article>
+            <article class="why-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-currency-dollar"></i>
+                <h3>Transparent pricing</h3>
+                <p>You see the product cost, shipping fee, and our service fee separately. No hidden charges.</p>
+            </article>
+            <article class="why-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-arrow-repeat"></i>
+                <h3>Refund policy</h3>
+                <p>If a product arrives wrong or damaged due to our error, you get a full refund. Simple.</p>
+            </article>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <div class="section-label">Testimonials</div>
+        <h2>Customers love the smooth delivery experience</h2>
+        <p class="sub">From first request to doorstep delivery, our clients trust BridgeCart to make sourcing from China
+            feel effortless.</p>
+        <div class="testimonial-grid">
+            <article class="testimonial-card" data-aos="fade-up">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"The process felt effortless. I ordered my laptop and it arrived safely in Monrovia with clear updates
+                    all the way."</p>
+                <strong>Sarah S.</strong>
+            </article>
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Their team handled everything from supplier selection to shipping. I received the exact items I asked
+                    for."</p>
+                <strong>Emmanuel K.</strong>
+            </article>
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Fast quotes, great communication, and reliable delivery. It feels like having a personal buying agent
+                    in China."</p>
+                <strong>Anita B.</strong>
+            </article>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="form-section" id="request-form">
+        <div class="form-inner">
+            <div class="section-label">Place a request</div>
+            <h2>Tell us what you need</h2>
+            <p class="sub">Fill in the details and we will send you a quote within 24 hours via WhatsApp or email.</p>
+
+            <form class="form-card" id="request-form-card" novalidate data-aos="fade-up">
+                <div class="form-row">
+                    <div class="field">
+                        <label for="fname">Full name</label>
+                        <input type="text" id="fname" name="full_name" placeholder="James Kollie" required>
+                    </div>
+                    <div class="field">
+                        <label for="fphone">WhatsApp number</label>
+                        <input type="tel" id="fphone" name="whatsapp_number" placeholder="+231 77 000 0000" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="femail">Email address</label>
+                        <input type="email" id="femail" name="email" placeholder="james@email.com">
+                    </div>
+                    <div class="field">
+                        <label for="fcategory">Product category</label>
+                        <select id="fcategory" name="category">
+                            <option value="">Select a category</option>
+                            <option>Electronics</option>
+                            <option>Clothing</option>
+                            <option>Footwear</option>
+                            <option>Furniture</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row full">
+                    <div class="field">
+                        <label for="fproduct">What do you want to order?</label>
+                        <textarea id="fproduct" name="product_description"
+                            placeholder="E.g. Samsung Galaxy A55 256GB, black color. Looking for a good price and genuine product."
+                            required></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="fbudget">Your budget (USD)</label>
+                        <input type="text" id="fbudget" name="budget" placeholder="e.g. $200">
+                    </div>
+                    <div class="field">
+                        <label for="flocation">Delivery location</label>
+                        <input type="text" id="flocation" name="delivery_location" placeholder="e.g. Monrovia, Sinkor">
+                    </div>
+                </div>
+                <button class="btn-submit" type="submit">
+                    <i class="bi bi-send"></i> Send my request
+                </button>
+                <div class="form-message" id="request-form-message" role="status" aria-live="polite"></div>
+                <div class="wa-hint">
+                    <i class="bi bi-whatsapp"></i>
+                    Prefer WhatsApp? Chat directly:
+                    <a href="https://wa.me/231779005985" target="_blank" rel="noreferrer">+231 77 900 5985</a>
+                </div>
+            </form>
+
+            <div class="success-msg" id="success-msg">
+                <i class="bi bi-check-circle"></i>
+                <h3>Request received!</h3>
+                <p>We will reach out within 24 hours with your quote via WhatsApp or email.</p>
+                <p class="mt-3 small text-muted">
+                    Reach us directly: <a href="https://wa.me/231779005985" class="text-success">+231 77 900 5985</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="page" id="page-shop">
+    <div class="shop-hero">
+        <div class="container">
+            <h1>What you see is <em>exactly</em><br>what you will get</h1>
+            <p>Both in quality and price. Every item below is sourced directly from verified Chinese suppliers and
+                inspected before it ships to you.</p>
+        </div>
+    </div>
+
+    <div class="shop-controls">
+        <div class="container d-flex flex-wrap gap-2">
+            <button class="filter-btn active" type="button" data-filter-category="All">All items</button>
+            {% for category in categories %}
+            <button class="filter-btn" type="button" data-filter-category="{{ category }}">{{ category }}</button>
+            {% empty %}
+            <span class="text-muted small py-1">No categories yet.</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="status-message" id="buy-success-message" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="shop-grid-wrap">
+        <div class="shop-grid" id="shop-grid">
+            {% for product in products %}
+            <article class="product-card" data-category="{{ product.category }}" data-aos="fade-up">
+                <div class="product-img">
+                    <span class="product-emoji">{% if product.emoji %}{{ product.emoji }}{% else %}&#128230;{% endif %}</span>
+                    {% if product.badge %}
+                    <span class="badge badge-{{ product.badge|lower }}">{{ product.badge }}</span>
+                    {% endif %}
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">{{ product.category }}</div>
+                    <div class="product-name">{{ product.name }}</div>
+                    <div class="product-desc">{{ product.description }}</div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            ${{ product.price|floatformat:2 }}
+                            <small>+ shipping</small>
+                        </div>
+                        <button class="btn-order" type="button" data-open-product="true"
+                            data-product-name="{{ product.name|escape }}"
+                            data-product-category="{{ product.category|escape }}"
+                            data-product-price="{{ product.price|floatformat:2 }}">
+                            <i class="bi bi-cart"></i> Buy
+                        </button>
+                    </div>
+                </div>
+            </article>
+            {% empty %}
+            <div class="empty-state" data-aos="fade-up">
+                <i class="bi bi-bag"></i>
+                <h3>No products yet</h3>
+                <p>Add active products in the Django admin to populate the shop.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="buy-modal" aria-hidden="true">
+        <div class="modal-card">
+            <button class="modal-close" type="button" data-close-buy-modal="true">&times;</button>
+            <div class="section-label">Buy this item</div>
+            <h3 id="buy-product-label">Order request</h3>
+            <p class="modal-subtitle">Enter your details and we will contact you on WhatsApp.</p>
+
+            <form id="buy-form" novalidate>
+                <div class="field">
+                    <label for="buyer-name">Your name</label>
+                    <input type="text" id="buyer-name" name="buyer_name" placeholder="John Doe" required>
+                </div>
+                <div class="field">
+                    <label for="buyer-phone">WhatsApp number</label>
+                    <input type="tel" id="buyer-phone" name="buyer_phone" placeholder="+231 77 000 0000" required>
+                </div>
+                <div class="field">
+                    <label for="buyer-note">Anything else?</label>
+                    <textarea id="buyer-note" name="buyer_note" placeholder="Preferred color, size, or extra details"></textarea>
+                </div>
+                <div class="form-message" id="buy-form-message" role="status" aria-live="polite"></div>
+                <button class="btn-submit" type="submit">Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="shop-cta-banner" data-aos="fade-up">
+        <h3>Do not see what you are looking for?</h3>
+        <p>We can source almost anything from China. Just send us a request and we will find it for you within 24
+            hours.</p>
+        <button class="btn-gold" type="button" data-page-target="home" data-scroll-target="request-form">
+            <i class="bi bi-send"></i> Request a custom product
+        </button>
+    </div>
+</section>
+{% endblock %}
