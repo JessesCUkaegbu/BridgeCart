@@ -29,7 +29,7 @@ SECRET_KEY = env("SECRET_KEY")
 
 # 4. Networking & Routing
 # Directly parses comma-separated strings into lists natively.
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1"] if DEBUG else [])
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1", "web-bridgecart.up.railway.app"] if DEBUG else [])
 if not DEBUG and not ALLOWED_HOSTS:
     raise environ.ImproperlyConfigured("ALLOWED_HOSTS must be explicitly defined in production.")
 
