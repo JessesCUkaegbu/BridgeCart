@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 import environ
+import dj_database_url
 
 # 1. Initialize environment framework
 env = environ.Env(
@@ -75,12 +76,32 @@ TEMPLATES = [
 WSGI_APPLICATION = "bridgecart.wsgi.application"
 ASGI_APPLICATION = "bridgecart.asgi.application"
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+# ── 5. DATABASE ──────────────────────────────────────────────────
+# Railway automatically injects DATABASE_URL when a PostgreSQL plugin is added.
+# - Locally (no DATABASE_URL):  falls back to SQLite — zero config needed.
+# - On Railway (DATABASE_URL set): uses PostgreSQL automatically.
+
+DATABASE_URL = env("DATABASE_URL", default=None)
+
+if DATABASE_URL:
+    # Production / Railway — use the injected PostgreSQL URL
+    DATABASES = {
+        "default": dj_database_url.config(
+            default=DATABASE_URL,
+            conn_max_age=600,        # persistent connections — better performance
+            conn_health_checks=True, # auto-reconnect on stale connections
+            ssl_require=not DEBUG,   # enforce SSL on Railway, skip locally
+        )
     }
-}
+else:
+    # Local development — SQLite, no setup required
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

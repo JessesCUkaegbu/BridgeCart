@@ -1,1 +1,1 @@
-web: gunicorn bridgecart.wsgi:application
+web: python manage.py migrate && gunicorn bridgecart.wsgi:application
