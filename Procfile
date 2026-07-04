@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn bridgecart.wsgi:application
+web: python manage.py collectstatic --noinput && python manage.py migrate && gunicorn bridgecart.wsgi:application
