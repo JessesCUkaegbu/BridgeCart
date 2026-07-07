@@ -154,3 +154,24 @@ if not DEBUG:
     CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
     if not CSRF_TRUSTED_ORIGINS:
         raise environ.ImproperlyConfigured("CSRF_TRUSTED_ORIGINS cannot be empty in production.")
+    
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "ERROR",
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["console"],
+            "level": "ERROR",
+            "propagate": False,
+        },
+    },
+}
