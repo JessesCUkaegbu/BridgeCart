@@ -394,7 +394,7 @@
 
     <div class="shop-grid-wrap">
         <div class="shop-grid" id="shop-grid">
-            {% for product in products %}
+            <!-- {% for product in products %} -->
             <article class="product-card" data-category="{{ product.category }}" data-aos="fade-up">
                 <div class="product-img">
                     <span class="product-emoji" aria-hidden="true">
@@ -422,13 +422,13 @@
                     </div>
                 </div>
             </article>
-            {% empty %}
+            <!-- {% empty %} -->
             <div class="empty-state" data-aos="fade-up">
                 <i class="bi bi-bag" aria-hidden="true"></i>
                 <h3>No products yet</h3>
                 <p>Add active products in the Django admin to populate the shop.</p>
             </div>
-            {% endfor %}
+            <!-- {% endfor %} -->
         </div>
     </div>
 
