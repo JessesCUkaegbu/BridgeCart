@@ -11,7 +11,7 @@ urlpatterns = [
 
 # Serve local static assets directly when Django is running without the
 # built-in debug static handler.
-if not settings.DEBUG:
-    urlpatterns += [
-        re_path(r"^static/(?P<path>.*)$", static_serve, {"insecure": True}),
-    ]
+# if not settings.DEBUG:
+#     urlpatterns += [
+#         re_path(r"^static/(?P<path>.*)$", static_serve, {"insecure": True}),
+#     ]
