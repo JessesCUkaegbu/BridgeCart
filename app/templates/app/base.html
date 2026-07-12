@@ -9,20 +9,28 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'app/main.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/chat.css' %}">
     <title>{% block title %}BridgeCart - From China, To Your Door{% endblock %}</title>
 </head>
 
 <body class="bridgecart-body">
     <header class="site-header shadow-sm">
-        <a class="site-logo" href="#page-home" data-page-target="home">
-            <span class="site-logo-icon"><i class="bi bi-truck"></i></span>
+        <a class="site-logo" href="{% url 'home' %}">
+            <span class=" site-logo-icon"><i class="bi bi-truck"></i></span>
             <span class="site-logo-text">Bridge<span>Cart</span></span>
         </a>
         <div class="site-nav-links">
-            <button class="site-nav-link active" type="button" data-page-target="home">Home</button>
-            <button class="site-nav-link" type="button" data-page-target="shop">Shop</button>
-            <button class="site-nav-cta" type="button" data-page-target="home" data-scroll-target="request-form">
+            <button class="site-nav-link active">
+                <a class="site-nav-link" href="{% url 'home' %}">Home</a>
+            </button>
+            <button class=" site-nav-link">
+                <a class="site-nav-link" href="{% url 'chat' %}">Chat
+                    with
+                    our AI</a>
+            </button>
+            <button class=" site-nav-cta" type="button" data-page-target="home" data-scroll-target="request-form">
                 Request a product
             </button>
         </div>
@@ -47,7 +55,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="{% static 'app/main.js' %}"></script>
+    <!-- Custom JavaScript -->
+    <script src="{% static 'app/js/main.js' %}"></script>
+    <script src="{% static 'app/js/chat.js' %}"></script>
     {% block extra_scripts %}{% endblock %}
 </body>
 

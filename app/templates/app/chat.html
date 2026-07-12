@@ -1,0 +1,68 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+
+<section class="chat-page" aria-label="BridgeCart sourcing assistant">
+
+    {# ── Compact header strip ── #}
+    <div class="chat-hero">
+        <div class="container chat-hero-inner">
+            <div class="chat-hero-id">
+                <!-- <div class="chat-avatar chat-avatar--lg" aria-hidden="true">
+                    <i class="bi bi-truck"></i>
+                </div> -->
+                <div>
+                    <h1>BridgeCart Assistant</h1>
+                    <p class="chat-hero-status">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Online — quotes verified by our team in China
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# ── Chat window ── #}
+    <div class="chat-shell container">
+
+        <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-label="Conversation">
+            {# Messages are injected here by chat.js #}
+        </div>
+
+        {# Quick-start prompt chips (hidden after first user message) #}
+        <div class="chat-chips" id="chat-chips" role="group" aria-label="Suggested requests">
+            <button type="button" class="chat-chip" data-chip="I'm looking for a smartphone under $200">
+                📱 Smartphone under $200
+            </button>
+            <button type="button" class="chat-chip" data-chip="I need wireless earbuds with good bass">
+                🎧 Wireless earbuds
+            </button>
+            <button type="button" class="chat-chip" data-chip="Show me men's sneakers, size 43">
+                👟 Men's sneakers
+            </button>
+            <button type="button" class="chat-chip" data-chip="I want an office chair for my home office">
+                🪑 Office chair
+            </button>
+        </div>
+
+        {# ── Input bar ── #}
+        <form class="chat-inputbar" id="chat-form" autocomplete="off">
+            <label for="chat-input" class="visually-hidden">Describe the product you want</label>
+            <textarea id="chat-input" name="message" rows="1" placeholder="Describe what you're looking for…"
+                maxlength="1000" required></textarea>
+            <button type="submit" class="chat-send" id="chat-send" aria-label="Send message">
+                <i class="bi bi-send-fill" aria-hidden="true"></i>
+            </button>
+        </form>
+
+        <p class="chat-disclaimer">
+            Prices shown in chat are estimates. Your final quote is confirmed by our team
+            on WhatsApp before you pay anything.
+        </p>
+
+    </div>
+</section>
+
+
+{% endblock %}

@@ -4,6 +4,7 @@ from .models import Product
 
 
 def home(request):
-    # products = Product.objects.filter(is_active=True)
-    # categories = products.order_by("category").values_list("category", flat=True).distinct()
     return render(request, "app/index.html")
+
+def chat(request):
+    return render(request, "app/chat.html")
