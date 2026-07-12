@@ -8,8 +8,11 @@
 .chat-page {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 70px);
-    /* fill viewport under sticky nav */
+    /* LOCK the page to the viewport — height (not min-height) is what
+     stops the document from growing as messages are added */
+    height: calc(100vh - 70px);
+    /* 70px = sticky nav height; adjust if yours differs */
+    overflow: hidden;
     background: var(--surface-0);
 }
 
@@ -83,20 +86,50 @@ a.site-nav-link {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-height: 0;
+    /* CRITICAL — without this, flex children refuse to shrink
+                   and overflow-y:auto on .chat-messages never activates */
     max-width: 820px;
     width: 100%;
-    padding: 1.5rem 1.25rem 2rem;
+    padding: 1.5rem 1.25rem 1.25rem;
 }
 
 /* ── MESSAGES AREA ──────────────────────────────────────────── */
 .chat-messages {
     flex: 1;
+    min-height: 0;
+    /* completes the height chain — this is the ONLY element that scrolls */
     display: flex;
     flex-direction: column;
     gap: 1rem;
     overflow-y: auto;
+    overscroll-behavior: contain;
+    /* stops scroll from "leaking" to the page at the edges */
     padding: .25rem .25rem 1rem;
     scroll-behavior: smooth;
+}
+
+/* Slim, brand-coloured scrollbar */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(27, 58, 107, .25);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(27, 58, 107, .45);
+}
+
+.chat-messages {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(27, 58, 107, .25) transparent;
 }
 
 /* One message row */
