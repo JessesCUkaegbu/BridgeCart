@@ -18,19 +18,13 @@
 <body class="bridgecart-body">
     <header class="site-header shadow-sm">
         <a class="site-logo" href="{% url 'home' %}">
-            <span class=" site-logo-icon"><i class="bi bi-truck"></i></span>
-            <span class="site-logo-text">Bridge<span>Cart</span></span>
+            <img src="{% static 'app/image/bridgecart-wordmark-logo.png' %}" alt="BridgeCart logo"
+                class="site-logo-img">
         </a>
         <div class="site-nav-links">
-            <button class="site-nav-link active">
-                <a class="site-nav-link" href="{% url 'home' %}">Home</a>
-            </button>
-            <button class=" site-nav-link">
-                <a class="site-nav-link" href="{% url 'chat' %}">Chat
-                    with
-                    our AI</a>
-            </button>
-            <button class=" site-nav-cta" type="button" data-page-target="home" data-scroll-target="request-form">
+            <a class="site-nav-link active" href="{% url 'home' %}">Home</a>
+            <a class="site-nav-link" href="{% url 'chat' %}">Chat with our AI</a>
+            <button class="site-nav-cta" type="button" data-page-target="home" data-scroll-target="request-form">
                 Request a product
             </button>
         </div>
@@ -44,8 +38,8 @@
         <div class="footer-logo">Bridge<span>Cart</span></div>
         <p>From China, to your door &middot; Liberia</p>
         <div class="footer-links">
-            <button type="button" data-page-target="home">Home</button>
-            <button type="button" data-page-target="shop">Shop</button>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'chat' %}">Chat</a>
             <button type="button" data-whatsapp-link="https://wa.me/231779005985">WhatsApp</button>
         </div>
         <small>&copy; 2026 BridgeCart. All rights reserved.</small>
