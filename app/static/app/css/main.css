@@ -82,6 +82,13 @@ body {
   object-fit: contain;
 }
 
+a.site-nav-cta {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Links styled as nav items need this so they match the buttons */
 a.site-nav-link {
   text-decoration: none;
