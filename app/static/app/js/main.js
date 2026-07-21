@@ -142,3 +142,22 @@ document.addEventListener("DOMContentLoaded", () => {
   setActivePage("home");
 
 });
+
+// ── Mobile nav toggle ────────────────────────────────────────
+const navToggle = document.querySelector(".nav-toggle");
+const navLinksPanel = document.getElementById("site-nav-links");
+
+if (navToggle && navLinksPanel) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinksPanel.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  // Close the menu when any link inside it is tapped
+  navLinksPanel.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinksPanel.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}

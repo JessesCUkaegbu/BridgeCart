@@ -21,12 +21,17 @@
             <img src="{% static 'app/image/bridgecart-wordmark-logo.png' %}" alt="BridgeCart logo"
                 class="site-logo-img">
         </a>
-        <div class="site-nav-links">
+        <!-- Hamburger toggle — only visible on mobile -->
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+
+        <div class="site-nav-links" id="site-nav-links">
             <a class="site-nav-link active" href="{% url 'home' %}">Home</a>
             <a class="site-nav-link" href="{% url 'chat' %}">Chat with our AI</a>
-            <a class="site-nav-cta" href="{% url 'home' %}#request-form">
-                Request a product
-            </a>
+            <a class="site-nav-cta" href="{% url 'home' %}#request-form">Request a product</a>
         </div>
     </header>
 
