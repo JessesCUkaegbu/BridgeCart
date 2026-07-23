@@ -23,3 +23,4 @@ media/
 .vscode/
 .DS_Store
 Thumbs.db
+staticfiles/
